@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light">
+
+    <RelativeLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/view_easytagdrag_change_tag" />
+
+        <ImageView
+            android:id="@+id/drag_close_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/view_easytagdrag_close_tag"
+            android:src="@drawable/delete" />
+
+        <TextView
+            android:id="@+id/drag_finish_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/delete"
+            android:text="@string/view_easytagdrag_complete"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab"
+        android:padding="8dp">
+
+        <com.android.theguardian.tagdragview.widget.DragDropGirdView
+            android:id="@+id/tagdrag_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:horizontalSpacing="12dp"
+            android:nestedScrollingEnabled="true"
+            android:numColumns="4"
+            android:verticalSpacing="10dp"
+            app:fixed_type="true" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tagdrag_view"
+            android:text="@string/view_easytagdrag_long_press" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv"
+            android:layout_marginTop="8dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/more_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_easytagdrag_add_more_tag" />
+
+            <GridView
+                android:id="@+id/add_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/more_tv"
+                android:layout_marginTop="8dp"
+                android:divider="@null"
+                android:fadingEdge="none"
+                android:horizontalSpacing="12dp"
+                android:nestedScrollingEnabled="true"
+                android:numColumns="4"
+                android:verticalSpacing="10dp">
+
+            </GridView>
+        </RelativeLayout>
+
+
+        <!-- Host container for the tile drag shadow -->
+        <FrameLayout
+            android:id="@+id/activity_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/tile_drag_shadow_overlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">theGuardian</string>
+    <string name="sync_account_type" translatable="false">theguardian.android.com</string>
+    <string name="content_authority" translatable="false">"com.android.theguardian"</string>
+
+    <string name="empty_news_list">No News</string>
+    <string name="title_news_detail">News Detail</string>
+
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="view_easytagdrag_change_tag">change tag</string>
+    <string name="view_easytagdrag_close_tag">close tag selection</string>
+    <string name="view_easytagdrag_complete">complete</string>
+    <string name="view_easytagdrag_long_press">long press to sort or delete</string>
+    <string name="view_easytagdrag_add_more_tag">add more tag</string>
+    <string name="view_tagitem_delete">delete</string>
+
+    <string name="menu_add">add</string>
+
+</resources>
